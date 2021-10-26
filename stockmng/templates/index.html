@@ -1,0 +1,44 @@
+{% extends "base.html"%}
+{% load static %}
+{% block content %}
+
+<div class="container">
+            <form action="#" method="post">
+            {% csrf_token %}
+            {{ forms.management_form }}
+                <div class="row">
+                    <div class="col-8">
+                        <table class="table table-hover table-sm table-fixed">
+                                <thead>
+                                    <tr>
+                                        <th class="col-3">Designation</th>
+                                        <th class="col-3">Prix Unitaire</th>
+                                        <th class="col-3">Stock</th>
+                                        <th class="col-3">Effacer</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for form in forms %}
+                                        <tr>
+                                            <td id="to-hide">{{form.id}}</td>
+                                            <td>{{form.designation}}</td>
+                                            <td>{{form.price}}</td>
+                                            <td>{{form.remaining}}</td>
+                                            <td>{{form.deleteItem}}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                    </div>
+                    <div class="col-4">
+                        <p><h1  class="myP"> <img src="{% static 'img/logo.png' %}" alt="logo"> Stock Items:</h1></p>
+                        <p>Valeur totale: {{ttl}} Ariary</p>
+                        <div class="d-grid gap-2">
+                            <input type="submit" class="btn btn-primary" value="Enregistrer">
+                        </div>
+                        
+                    </div>
+                </div>
+            </form>
+</div>
+{% endblock %}
