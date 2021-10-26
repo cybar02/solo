@@ -1,0 +1,2 @@
+# solo
+Django stock manager
