@@ -1,0 +1,41 @@
+.table-fixed thead {
+    width: 100%;
+  }
+  .table-fixed tbody {
+    height: 550px;
+    overflow: auto;
+    width: 100%;
+  }
+  .table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+    display: block;
+  }
+  .table-fixed tbody tr td, .table-fixed thead > tr> th {
+    float: left;
+    border-bottom-width: 0;
+  }
+
+  img { width: 20%;}
+
+  #to-hide {
+    display: none;
+  }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
