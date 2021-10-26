@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '5hn4c+wbf)_qfdsfqsdfsqd)fçvjk
 #DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['floating-dawn-63778.herokuapp.com/']
 
 
 # Application definition
